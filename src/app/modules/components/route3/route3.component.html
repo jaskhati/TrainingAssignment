@@ -1,0 +1,25 @@
+<div class="continer px-3">
+  <div class="row gx-3">
+    <app-count-down-timer
+      [timeUnit]="timeUnit"
+      class="col-sm-5"
+    ></app-count-down-timer>
+    <app-timer-control
+      (toogleTimerEvent)="toogleTimer($event)"
+      (reset)="resetTimer()"
+      class="col-sm-7"
+    ></app-timer-control>
+  </div>
+
+  <div class="row gx-3">
+    <app-time-stamps
+      [timeStamps]="timeStamps"
+      class="col-sm-5"
+    ></app-time-stamps>
+    <app-control-reports
+      [pauseCount]="pauseCount"
+      [startCount]="startCount"
+      class="col-sm-7"
+    ></app-control-reports>
+  </div>
+</div>

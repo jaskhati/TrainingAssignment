@@ -1,0 +1,35 @@
+.grid {
+  width: 260px;
+  height: auto;
+  border: 1px solid black;
+  margin: 16px;
+}
+
+.table {
+  width: 430px;
+  height: auto;
+  border: 1px solid black;
+  margin: 60px;
+}
+
+.view {
+  background-color: #ed9c21;
+  width: 80px;
+  height: 43px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.grid-icon {
+  height: 37px;
+  border-right: 2px solid black;
+  cursor: pointer;
+}
+
+.table-view {
+  height: 29px;
+  margin-left: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+<div class="control-container">
+  <label>Enter Time Unit</label>
+  <input
+    #timeUnit
+    class="time-unit"
+    type="number"
+    placeholder="Enter Time Unit"
+  />
+
+  <div class="buttons-container">
+    <button
+      [class.d-none]="!showStart"
+      (click)="toogleTimer(timeUnit.value, false)"
+      class="btn btn-primary"
+    >
+      Start
+    </button>
+    <button
+      [class.d-none]="showStart"
+      (click)="toogleTimer(timeUnit.value, true)"
+      class="btn btn-secondary"
+    >
+      Pause
+    </button>
+    <button (click)="resetTimer(timeUnit)" class="btn btn-secondary">
+      Reset
+    </button>
+  </div>
+</div>

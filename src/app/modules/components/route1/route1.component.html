@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="border border-2 border-dark box-height px-4 py-3">
+    <div class="border border-2 border-dark inner-box-height px-4 py-3">
+      <div class="border border-2 border-dark inner-box-height px-4 py-3">
+        <div class="border border-2 border-dark inner-box-height px-4 py-3">
+          <div class="border border-2 border-dark inner-box-height px-4 py-3">
+            <div class="border border-2 border-dark inner-box-height px-4 py-3">
+              <div
+                class="border border-2 border-dark inner-box-height px-4 py-3"
+              >
+                <div
+                  class="border border-2 border-dark inner-box-height px-4 py-3"
+                >
+                  <ngb-carousel
+                    #carousel
+                    [showNavigationIndicators]="false"
+                    [interval]="1000"
+                  >
+                    <ng-template
+                      ngbSlide
+                      *ngFor="let img of images; index as i"
+                    >
+                      <div>
+                        <h5>{{ img }} slide label</h5>
+                        <p>
+                          Some representative placeholder content for the
+                          {{ img }} slide.
+                        </p>
+                      </div>
+                    </ng-template>
+                  </ngb-carousel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="container mt-5">
+  <p *ngFor="let timeStamp of timeStamps">
+    {{ timeStamp.state }} at {{ timeStamp.time | date: "d-M-Y, h:mm:ss a" }}
+  </p>
+</div>

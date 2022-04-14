@@ -1,0 +1,11 @@
+<div infinite-scroll (scrolled)="onScrollDown($event)" class="container">
+  <div class="d-flex flex-wrap">
+    <div
+      id="contentInside"
+      (click)="openAlert(i)"
+      *ngFor="let container of containers; let i = index"
+    >
+      <button class="btn btn-primary">Button {{ i + 1 }}</button>
+    </div>
+  </div>
+</div>

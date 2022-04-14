@@ -1,0 +1,43 @@
+<div class="container d-flex justify-content-end">
+  <div class="view">
+    <img
+      class="grid-icon"
+      (click)="changeView('grid')"
+      src="https://img.icons8.com/material-rounded/24/000000/grid-2.png"
+    />
+    <img
+      class="table-view"
+      (click)="changeView('table')"
+      src="https://img.icons8.com/ios/50/000000/align-justify.png"
+    />
+  </div>
+
+  <div ngbDropdown class="d-inline-block">
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      id="dropdownBasic1"
+      ngbDropdownToggle
+    >
+      Select Price Filter
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button (click)="sortProducts('l2h')" ngbDropdownItem>
+        Price Low To High
+      </button>
+      <button (click)="sortProducts('h2l')" ngbDropdownItem>
+        Price High To Low
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex flex-wrap">
+  <div
+    [ngClass]="{ grid: grid, table: table }"
+    *ngFor="let product of products"
+  >
+    <img width="100%" [src]="product.filename" />
+    <div>PRICE = {{ product.price }} INR</div>
+  </div>
+</div>
